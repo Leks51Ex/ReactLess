@@ -11,3 +11,74 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.game-info {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.game-field {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.cell {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #e7e7e7;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+
+.cell:hover {
+  background-color: #d1d1d1;
+}
+.cell--win {
+  background-color: #4caf50; 
+  border: 2px solid #388e3c; 
+  color: white; 
+  font-weight: bold; 
+  transition: transform 0.3s; 
+  transform: scale(1.1);
+}
+.cell--win:hover {
+  background-color: #45a049; 
+  transform: scale(1.1); 
+}
+.symbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.symbol--x {
+  color: #ff5733; 
+}
+.symbol--o {
+  color: #33c1ff; 
+}
+.reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #87b19a;
+  border-radius: 5px;
+  cursor: pointer;
+}
